@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Simple Function
+
+        function HelloWorld(){
+            console.log('Hello World')
+        }
+
+        HelloWorld()
+
+        const say = HelloWorld
+
+        say()
+
+        //Params Function 
+
+        function sum (num1, num2){
+            result =  num1 + num2
+            console.log(result)
+        }
+
+        sum(1, 2)
+
+        //Rest Parameter (...)
+        function sayHi(name, ...num){
+
+            let score = 0
+
+            for(x of num){
+                score += x
+            }
+
+            let hi = `Hi ${name}, your score is ${score}`
+
+            return(hi)
+
+        }
+
+        let sapa = sayHi('Reza',1,2,3,4,5)
+        let sapa2 = sayHi('Cholid',1,1,2,5,4)
+
+        console.log(sapa)
+        console.log(sapa2)
+
+
+        //Anonymous Function
+        let anonymous = function(){ console.log('ini anonymous function')}
+        
+        anonymous()
+
+        let plus = function(num1, num2){console.log(num1 + num2)}
+
+        plus(1,2)
+ 
+
+        //Callback function Params
+
+        function sumSum(callback){
+            callback(5, 5, 10, 11, 212, 214, 123)
+        }
+
+        sumSum(function(...a){
+            result = 0
+            for(x of a){
+                result += x
+            }
+            console.log(result)
+        })
+
+
+        //Nested Function
+        function outer(...nama){
+
+            let name = []
+
+            for(x of nama){
+                name.push(`${x}`) 
+            }
+
+            function inner(firstName, LastName){
+                console.log(`${firstName}  ${LastName}`)
+            }
+            
+            inner(`${name[0]} ${name[1]}`,name[2])
+        }
+
+        outer('Handy', 'Reza', 'Alfanda')
+
+
+        //Recursive function
+         
+        function factorial(num){
+            if(num === 1 ){
+                return 1
+            }else{
+                return num * factorial(num - 1)
+            }
+        }
+
+        console.log(factorial(4))
+
+
+        //function countUp(num){
+        //   if(num === 100){
+        //       return 1
+        //   }else{
+        //       console.log(num)
+        //       countUp(num + 1)
+        //   }
+        // }
+
+        //countUp(1)
+
+
+        function countDown(no){
+            if(no === 0){
+                return 1
+            }else{
+                console.log(no)
+                countDown(no - 1)
+            }
+        }
+
+        countDown(50)
+
+
+        //Function Generator (*)
+        function* createName(){
+            yield "Handy"
+            yield "Reza"
+            yield "Alfanda"
+        }
+
+        const name = createName()
+        for(const x of name){
+            console.log(x)
+        }
+
+
+        //arrow function
+
+        let oi = (name) => `Hello ${name}`
+        
+        let hi = oi('reza')
+
+        console.log(hi)
+
+
+        let sayHii = (namae) => console.log(`Hi ${namae}`)
+
+        sayHii('Ahyar')
+
+    </script>
+</body>
+</html>

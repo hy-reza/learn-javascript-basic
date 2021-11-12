@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let human = {
+            firstName : 'Handy',
+            lastName  : 'Reza',
+            get fullName(){
+                return `${this.firstName} ${this.lastName}`
+            },
+
+            set fullName(value){
+                let arr = value.split(' ')
+                console.log(arr)
+                this.firstName = arr[0]
+                this.lastName = arr[1]
+
+            }
+        }
+
+        human.fullName = 'Cholid Firdaus'
+        console.table(human)
+
+    </script>
+</body>
+</html>

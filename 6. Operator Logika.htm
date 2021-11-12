@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Operator</title>
+</head>
+<body>
+    <script>
+        /*
+        Ada 3 jenis operator Logika : 
+        1. && (Dam)
+        2. || (Atau)
+        3. !  (Kebalikan)
+        */
+
+
+        const username = 'admin'
+        const password = 'admin'
+
+        let input_pw = 'admin'
+        let input_ur = 'admin'
+
+        if(input_pw == password && input_ur == username){
+            document.write('anda berhasil login')
+        }
+
+        document.write('<br>')
+        
+        input_pw = 'salah'
+        if(input_pw == password && input_ur == username){
+            document.write('anda berhasil login')
+        }else{
+            document.write('Password yang anda masukan salah')
+        }
+
+
+    </script>
+</body>
+</html>

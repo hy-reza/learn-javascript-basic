@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Destructuring value array ke variable
+        let names = ['Handy', undefined , 'Alfanda']
+
+        /* let [firstName, middleName = 'Azer', lastName, ...others] = names
+
+        console.log(firstName)
+        console.log(middleName)
+        console.log(lastName)
+        console.log(others) */
+
+        //Destructuring di parameter
+        let fullname = ([firstName, middleName = 'Reza', lastName, ...others]) => `${firstName} ${middleName} ${lastName}`
+
+        console.log(fullname(names))
+
+        //Destructuring di Obect
+
+        let bio = {
+            name : {
+                firstName : 'Handy Reza',
+                lastName  : 'Alfanda'
+            },
+            address : 'Malang',
+            hobby : 'Gaming'
+
+        }
+
+
+        let {name : {firstName, lastName}, address : alamat, hobby : hobi} = bio
+        
+        console.log(firstName)
+        console.log(lastName)
+        console.log(alamat)
+        console.log(hobi)
+    </script>
+</body>
+</html>
